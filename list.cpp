@@ -6,7 +6,8 @@ void build(node * & head) {
   current->data = (rand()%10 + 1);
   head = current;
   node* previous = current;
-  for (int a = 0; a < 19; a++) {
+  int additionalValues = (rand()&5);
+  for (int a = 0; a < 15+additionalValues; a++) {
     current = new node();
     previous->next = current;
     current->data = (rand()%10 + 1);
@@ -22,4 +23,3 @@ void display_all(node * head) {
   }
   cout << endl;
 }
-
